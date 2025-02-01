@@ -51,7 +51,26 @@ npm start
 ```
 docker-compose up --build
 ```
-The server will start on **port 4000** by default. You can change the port by modifying the PORT variable in your .env file, which has to be made in the root directory.
+By default, the server will start on **port 4000**. You can change the port by modifying the PORT variable in your .env file, which must be made in the root directory.
 
 ### Verify the Server:
 Open your browser or API client and navigate to http://localhost:4000. You should see a response indicating that the server is running.
+
+## API Endpoints
+
+- Fetch all FAQs
+```
+GET /api/faqs
+```
+
+- Add a new FAQ
+```
+POST /api/faqs
+Content-Type: application/json
+Body: { "question": "Your question?", "answer": "The answer." }
+```
+
+- Delete an FAQ
+```
+DELETE /api/faqs/:id
+```
